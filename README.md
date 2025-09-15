@@ -29,3 +29,4 @@ Error handling & loading states
 * Room / Remote API (data source, can be swapped)
 
 * LiveData & ViewModel
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/6f763a98-1797-4000-8d74-cdc4043e9d51" />
