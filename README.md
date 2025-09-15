@@ -1,6 +1,6 @@
 Notes App 📝
 
-A production-ready Notes application built with MVVM architecture in Android. This project demonstrates how to create, read, update, and delete (CRUD) notes using a clean architecture approach and integrates REST APIs with the Retrofit library for seamless data handling.
+A production-ready Notes app built with MVVM in Android. Implements full CRUD using Retrofit-based REST APIs with clean architecture. Integrated Hilt for dependency injection and Navigation component for seamless flow with ViewModel & LiveData.
 
 🔑 Features
 
