@@ -41,7 +41,7 @@ Error handling & loading states
 <img width="200" height="800" alt="image" src="https://github.com/user-attachments/assets/2fa4d99d-0b15-4cf2-8b96-2c3ec17c7e33" />
 <img width="200" height="800" alt="image" src="https://github.com/user-attachments/assets/7c2356cf-e66f-4150-bd9b-439b3560d473" />
 
-<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/4f3f5bae-e8a3-4377-b0dc-3507262e5a05" />
+<img width="200" height="800" alt="image" src="https://github.com/user-attachments/assets/4f3f5bae-e8a3-4377-b0dc-3507262e5a05" />
 
 
 
