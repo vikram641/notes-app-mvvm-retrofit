@@ -30,6 +30,8 @@ Error handling & loading states
 
 * LiveData & ViewModel
 
+* app download link - https://i.diawi.com/cC4q5A 👈
+
 <img width="200" height="800" alt="image" src="https://github.com/user-attachments/assets/03e7460f-9ece-4a3e-b80c-b4a1f8f053ef" />
 <img width="200" height="800" alt="image" src="https://github.com/user-attachments/assets/12e33e1e-ec8b-4dfd-9cf4-40de6b31d325" />
 <img width="200" height="800" alt="image" src="https://github.com/user-attachments/assets/6f763a98-1797-4000-8d74-cdc4043e9d51" />
