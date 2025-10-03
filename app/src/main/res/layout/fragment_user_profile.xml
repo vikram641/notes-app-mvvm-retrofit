@@ -13,24 +13,51 @@
         android:layout_marginRight="30dp"
         android:paddingTop="36dp"
         android:paddingBottom="60dp">
-
-        <TextView
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:fontFamily="@font/sf_pro_display_bold"
-            android:text="@string/txt_register_header"
-            android:textColor="@color/highlight_text_color"
-            android:textSize="30sp" />
+            android:layout_gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/sf_pro_display_regular"
-            android:text="@string/txt_register_subheader"
-            android:textColor="@color/light_gray"
-            android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_1"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_background"
+                android:padding="4dp"
+                android:contentDescription="Profile Image" />
+
+            <!-- ProgressBar in center -->
+            <ProgressBar
+                android:id="@+id/imageProgressBar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminate="true"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <!-- Edit/Upload Icon -->
+            <ImageView
+                android:id="@+id/editProfileIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_camera"
+                android:background="@drawable/circle_white"
+                android:padding="4dp"
+                android:layout_gravity="bottom|end"
+                android:contentDescription="Edit Profile" />
+
+        </FrameLayout>
+
+
+
+
+
+
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +69,7 @@
             android:textSize="12sp" />
 
         <EditText
-            android:id="@+id/txt_username"
+            android:id="@+id/txt_username11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
@@ -87,33 +114,13 @@
             android:layout_marginTop="16dp"
             android:background="@color/light_gray" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_display_regular"
-            android:text="@string/txt_password"
-            android:textColor="@color/white"
-            android:textSize="12sp" />
 
-        <EditText
-            android:id="@+id/txt_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/sf_pro_display_semibold"
-            android:hint="@string/txt_password_hint"
-            android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/light_gray"
-            android:textSize="16sp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/light_gray" />
+
+
+
+
+
 
         <TextView
             android:id="@+id/txt_error"
@@ -133,7 +140,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/sf_pro_display_bold"
-            android:text="@string/txt_sign_up"
+            android:text="Save changes"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="16sp" />

@@ -16,6 +16,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.page.Utils.Constants.TAG
 import com.example.page.Utils.NetworkResult
 import com.example.page.Utils.TokenManager
+import com.example.page.databinding.FragmentLoginBinding
 import com.example.page.databinding.FragmentRegisterBinding
 import com.example.page.models.UserRequest
 import dagger.hilt.android.AndroidEntryPoint
@@ -66,6 +67,7 @@ class RegisterFragment : Fragment() {
 
         }
         binding.btnLogin.setOnClickListener {
+//            authViewModel.userdeatil()
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
 
@@ -107,6 +109,9 @@ class RegisterFragment : Fragment() {
             }
         })
     }
+
+   
+
 
 
 }

@@ -5,7 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.page.Utils.Constants.TAG
 import com.example.page.Utils.NetworkResult
-import com.example.page.api.NotesAPI
+import com.example.page.api.API
+//import com.example.page.api.NotesAPI
 import com.example.page.models.Note
 import com.example.page.models.NoteRequest
 import com.example.page.models.NoteResponce
@@ -15,7 +16,7 @@ import org.json.JSONObject
 import retrofit2.Response
 import javax.inject.Inject
 
-class NoteRepository @Inject constructor(private val notesAPI: NotesAPI) {
+class NoteRepository @Inject constructor(private val api: API) {
     private val _notesLiveData = MutableLiveData<NetworkResult<List<Note>>>()
     val notesLiveData : LiveData<NetworkResult<List<Note>>>
     get() = _notesLiveData
@@ -49,7 +50,10 @@ class NoteRepository @Inject constructor(private val notesAPI: NotesAPI) {
     suspend fun getNotes(){
     _statusLiveData.postValue((NetworkResult.Loading()))
     try {
-        val response = notesAPI.getNotes()
+        val response = api.getNotes()
+        Log.d(TAG, response.body().toString())
+
+
 
         if (response.isSuccessful && response.body() != null) {
             val notesList = response.body()?.notes?: emptyList()
@@ -68,7 +72,7 @@ class NoteRepository @Inject constructor(private val notesAPI: NotesAPI) {
 
     suspend fun createNote(noteRequest: NoteRequest){
         _notesLiveData.postValue(NetworkResult.Loading())
-        val response = notesAPI.createNote(noteRequest)
+        val response = api.createNote(noteRequest)
         if(response.isSuccessful && response.body() != null){
             _statusLiveData.postValue(NetworkResult.Success(response.body()!!.message))
         }
@@ -86,7 +90,7 @@ class NoteRepository @Inject constructor(private val notesAPI: NotesAPI) {
 
     suspend fun updateNote(noteId: String, noteRequest: NoteRequest){
         _statusLiveData.postValue(NetworkResult.Loading())
-        val response = notesAPI.updateNote(noteId , noteRequest)
+        val response = api.updateNote(noteId , noteRequest)
         if(response.isSuccessful && response.body() != null){
             _statusLiveData.postValue(NetworkResult.Success(response.body()!!.message))
         }
@@ -120,7 +124,7 @@ class NoteRepository @Inject constructor(private val notesAPI: NotesAPI) {
     suspend fun deleteNote(noteId: String){
         _statusLiveData.postValue((NetworkResult.Loading()))
         try {
-            val response = notesAPI.deleteNote(noteId)
+            val response = api.deleteNote(noteId)
 
             if (response.isSuccessful && response.body() != null) {
                 _statusLiveData.postValue(NetworkResult.Success(response.body()!!.message))

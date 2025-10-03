@@ -1,6 +1,7 @@
 package com.example.page.models
 
 data class UserResponce(
+    val success: Boolean,
     val token: String,
     val user: User
 )

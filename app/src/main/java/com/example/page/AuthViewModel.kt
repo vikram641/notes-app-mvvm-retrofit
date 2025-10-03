@@ -36,9 +36,16 @@ class AuthViewModel @Inject constructor(private val userRepository: UserReposito
 
         }
     }
+    fun userdeatil(){
+        viewModelScope.launch {
+            userRepository.userdetail()
+        }
+    }
     fun logout() {
         tokenManager.clearSession()
     }
+
+
 
 
     fun validateCredentials (username : String, password: String,email : String , isLogin:Boolean): Pair<Boolean,String> {

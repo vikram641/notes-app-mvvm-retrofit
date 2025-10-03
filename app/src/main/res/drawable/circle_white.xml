@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- White circle fill -->
+    <solid android:color="@android:color/white" />
+
+    <!-- Optional: Border around circle -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/highlight_text_color" />
+
+    <!-- Size automatically adjust hoga ImageView ke layout params ke hisaab se -->
+</shape>

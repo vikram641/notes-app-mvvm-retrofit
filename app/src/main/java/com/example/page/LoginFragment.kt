@@ -53,6 +53,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.loginBtn.setOnClickListener {
             val validateResult = validateUserInput()
+
             if(validateResult.first){
                 authViewModel.loginUser(getUserRequest())
 

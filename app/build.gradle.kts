@@ -93,4 +93,7 @@ dependencies {
 
     // shimmer view
     implementation (libs.shimmer)
+
+    implementation ("io.coil-kt:coil:2.6.0")
+
 }

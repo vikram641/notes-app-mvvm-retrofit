@@ -5,9 +5,10 @@ import android.net.Uri.Builder
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.example.page.Utils.Constants.BASE_URL
+import com.example.page.api.API
 import com.example.page.api.AuthInterceptor
-import com.example.page.api.NotesAPI
-import com.example.page.api.UserAPI
+//import com.example.page.api.NotesAPI
+//import com.example.page.api.UserAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -54,20 +55,20 @@ class NetworkModule {
             .baseUrl(BASE_URL)
 
     }
+//    @Singleton
+//    @Provides
+//    fun provideUserAPI(retrofitBuilder: Retrofit.Builder): UserAPI{
+//        return retrofitBuilder.build()
+//            .create(UserAPI::class.java)
+//
+//
+//    }
+
     @Singleton
     @Provides
-    fun provideUserAPI(retrofitBuilder: Retrofit.Builder): UserAPI{
-        return retrofitBuilder.build()
-            .create(UserAPI::class.java)
-
-
-    }
-
-    @Singleton
-    @Provides
-    fun provideNoteAPI(retrofitBuilder: Retrofit.Builder, okHttpClient: OkHttpClient):NotesAPI{
+    fun provideNoteAPI(retrofitBuilder: Retrofit.Builder, okHttpClient: OkHttpClient):API{
         return retrofitBuilder
             .client(okHttpClient)
-            .build().create(NotesAPI::class.java)
+            .build().create(API::class.java)
     }
 }
